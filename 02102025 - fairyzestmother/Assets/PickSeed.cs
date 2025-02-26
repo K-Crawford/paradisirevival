@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PickSeed : MonoBehaviour
 {
-    // public text CollectedSeeds;
+    // public TextMeshProUGUI CollectedSeeds;
 
     void OnTriggerEnter(Collider collision){
         if (collision.gameObject.name == "Seed") {
