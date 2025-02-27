@@ -16,7 +16,7 @@ public class ShiftScene : MonoBehaviour
     }
 
     void Update() {
-        Debug.Log(CalcDistToPlayer());
+        // Debug.Log(CalcDistToPlayer());
         if (CalcDistToPlayer() > GrapefruitRadius) {
             ChangeSceneTo("main");
         }
