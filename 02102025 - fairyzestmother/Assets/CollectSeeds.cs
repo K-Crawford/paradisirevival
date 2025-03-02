@@ -1,12 +1,12 @@
 using UnityEngine;
 using TMPro;
 
-public class PickSeed : MonoBehaviour
+public class CollectSeeds : MonoBehaviour
 {
     // public TextMeshProUGUI CollectedSeeds;
 
     public int CollectedSeeds;
-    public TextMeshProUGUI SeedsText;
+    public TextMeshProUGUI SeedCount;
 
     // void OnTriggerEnter(Collider collision){
     //     if (collision.gameObject.name == "Seed") {
@@ -22,7 +22,7 @@ public class PickSeed : MonoBehaviour
     public void OnGrabSeed() {
         CollectedSeeds += 1;
         gameObject.SetActive(false);
-        // SeedsText.text = CollectedSeeds.ToString();
+        SeedCount.text = "Seeds Collected: " + CollectedSeeds.ToString() + " / " + FruitInsides.SeedNumber;
     }
 
 }
