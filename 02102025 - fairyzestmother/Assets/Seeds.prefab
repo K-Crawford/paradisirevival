@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 516828542591920263}
   m_Layer: 0
   m_Name: Seeds
-  m_TagString: Untagged
+  m_TagString: tissue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,7 +137,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &620214296220515190
 MonoBehaviour:
   m_ObjectHideFlags: 0
