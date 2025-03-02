@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class Injure : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public AudioSource crash;
+    public int nectar;
+    void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.CompareTag("tissue")) {
+            crash.Play(); // ow
+            nectar -= 5; // heal
+        }
     }
 }
