@@ -14,8 +14,8 @@ public class HummingbirdController : MonoBehaviour
     public float flyingSpeed;
     private bool isFlying;
     private bool hasAlreadyBeenTriggered;
- 
- 
+
+
     private void Start()
     {
         toggleReference = customToggleReference.action;
@@ -46,7 +46,7 @@ public class HummingbirdController : MonoBehaviour
  
     private void Thrust()
     {
-        if (isFlying)
+        if (isFlying && Globals.Nectar > 0)
         {
             Vector3 flyDirection = leftHand.transform.position - head.transform.position;
             RaycastHit hit;

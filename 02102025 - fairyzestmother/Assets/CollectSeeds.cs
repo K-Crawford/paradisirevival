@@ -5,9 +5,6 @@ public class CollectSeeds : MonoBehaviour
 {
     // public TextMeshProUGUI CollectedSeeds;
 
-    public int CollectedSeeds;
-    public TextMeshProUGUI SeedCount;
-
     // void OnTriggerEnter(Collider collision){
     //     if (collision.gameObject.name == "Seed") {
     //         // CollectedSeeds += 1;
@@ -20,9 +17,8 @@ public class CollectSeeds : MonoBehaviour
     // using the grip button.
     // </summary>
     public void OnGrabSeed() {
-        CollectedSeeds += 1;
+        Globals.CollectedSeeds += 1;
         gameObject.SetActive(false);
-        SeedCount.text = "Seeds Collected: " + CollectedSeeds.ToString() + " / " + FruitInsides.SeedNumber;
     }
 
 }
