@@ -17,14 +17,15 @@ public class ShiftScene : MonoBehaviour
 
     void Update() {
         // Debug.Log(CalcDistToPlayer());
-        if (CalcDistToPlayer() > GrapefruitRadius) {
+        if (CalcDistToPlayer() > 4.9) {
             ChangeSceneTo("main");
         }
     }
 
+    /*
     void OnDrawGizmos() {
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(transform.position, GrapefruitRadius);
     }
-
+    */
 }

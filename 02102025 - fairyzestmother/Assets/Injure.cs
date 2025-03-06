@@ -19,11 +19,13 @@ public class Injure : MonoBehaviour
 
     void Update() {
         if (Globals.Nectar < 0) {
-            CoolDown.text = "napping (actually unconscious)";
+            /*
             string progress = SeedsCollected.text;
             SeedsCollected.text = "";
             NectarStored.text = "";
-            print("ouch");
+            */
+            CoolDown.text = "waiting for nectar from Hummingbird";
+            // Globals.Nectar = 1200;
             // this does not work
             /*
             Invoke("NoNectar", 50);
@@ -32,6 +34,9 @@ public class Injure : MonoBehaviour
             SeedsCollected.text = progress;
             NectarStored.text = "Globals.Nectar: 50000 / 100000";
             */
+        } else {
+            CoolDown.text = "";
+            // Globals.Nectar -= 1;
         }
     }
 

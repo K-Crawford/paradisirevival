@@ -6,6 +6,7 @@ TagManager:
   tags:
   - tissue
   - grapefruit
+  - fairy
   layers:
   - Default
   - TransparentFX
