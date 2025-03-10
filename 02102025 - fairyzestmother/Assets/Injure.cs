@@ -36,6 +36,7 @@ public class Injure : MonoBehaviour
             */
         } else {
             CoolDown.text = "";
+            Globals.Nectar += (int)(10 * Time.deltaTime);
             // Globals.Nectar -= 1;
         }
     }
