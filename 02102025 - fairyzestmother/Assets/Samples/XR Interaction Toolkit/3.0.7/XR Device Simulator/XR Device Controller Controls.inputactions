@@ -108,7 +108,7 @@
                     "name": "Primary Touch",
                     "type": "Button",
                     "id": "04a0ca31-1719-49b1-9e4c-bc95a9905486",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false

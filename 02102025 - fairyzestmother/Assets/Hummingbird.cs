@@ -1,3 +1,83 @@
+// using UnityEngine;
+// using UnityEngine.InputSystem;
+
+// public class Flight : MonoBehaviour
+// {
+//     public Transform Head;
+//     public Transform LeftHand;
+//     public Transform RightHand;
+//     public float speed = 0.5f;
+//     public InputActionReference toggleFlightAction;
+
+//     private bool isFlying = false;
+//     private Vector3 lastValidDirection;
+//     private float lastValidSpeed;
+
+//     void OnEnable()
+//     {
+//         if (toggleFlightAction != null)
+//         {
+//             toggleFlightAction.action.Enable();
+//             toggleFlightAction.action.performed += ToggleFlight;
+//         }
+//     }
+
+//     void OnDisable()
+//     {
+//         if (toggleFlightAction != null)
+//         {
+//             toggleFlightAction.action.performed -= ToggleFlight;
+//             toggleFlightAction.action.Disable();
+//         }
+//     }
+
+//     void ToggleFlight(InputAction.CallbackContext context)
+//     {
+//         isFlying = !isFlying;
+        
+//         // Preserve movement values when stopping
+//         if (!isFlying)
+//         {
+//             lastValidDirection = Head.rotation * Vector3.forward;
+//             lastValidSpeed = Mathf.Min(Mathf.Max(0.1f, 
+//                 (LeftHand.position - RightHand.position).magnitude), 0.9f);
+//         }
+//     }
+
+//     void Update()
+//     {
+//         if (isFlying)
+//         {
+//             // Active flight movement
+//             Quaternion rotation = Head.rotation;
+//             Vector3 direction = rotation * Vector3.forward;
+//             Vector3 distance = LeftHand.position - RightHand.position;
+            
+//             speed = Mathf.Min(Mathf.Max(0.1f, distance.magnitude), 0.9f);
+//             transform.position += direction * speed * Time.deltaTime;
+//         }
+//         else
+//         {
+//             // Apply decaying movement when stopped
+//             transform.position += lastValidDirection * lastValidSpeed * Time.deltaTime * 0.5f;
+//             lastValidSpeed = Mathf.Lerp(lastValidSpeed, 0, Time.deltaTime * 2f);
+//         }
+
+//         // Original teleportation logic
+//         float boundary = 4.5f;
+//         if (Mathf.Abs(transform.position.x) > boundary || 
+//             Mathf.Abs(transform.position.y) > boundary || 
+//             Mathf.Abs(transform.position.z) > boundary)
+//         {
+//             transform.position = new Vector3(
+//                 Random.Range(-4f, 4f),
+//                 Random.Range(-4f, 4f),
+//                 Random.Range(-4f, 4f)
+//             );
+//         }
+//     }
+// }
+
 using UnityEngine;
 
 public class Flight : MonoBehaviour {
